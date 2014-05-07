@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Nüams Extension",
+  "description": "This extension is a tool for us.",
+  "version": "0.1.0",
+  "icons": {"128": "nulogo.png"},
+  "browser_action": {
+    "default_icon": "nulogo.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [ {
+    "css": ["nuams.css"],
+    "js": [ "jquery.min.js", "background.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }]
+}
