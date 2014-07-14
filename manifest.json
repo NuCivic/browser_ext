@@ -9,6 +9,9 @@
     "default_icon": "nulogo.png",
     "default_popup": "popup.html"
   },
+  "web_accessible_resources": [
+       "nulogo-10.png"
+     ],
   "content_scripts": [ {
     "css": ["nuams.css"],
     "js": [ "jquery.min.js", "background.js" ],

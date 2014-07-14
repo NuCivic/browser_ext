@@ -1,17 +1,15 @@
 #nuams-bar {
-  background: url("http://www.nuams.com/sites/default/files/nulogo-10.png") no-repeat 4px 4px;
+  background: url("https://cloud.githubusercontent.com/assets/512243/3578165/868dd732-0ba5-11e4-8e4b-f0e991b34f4c.png") no-repeat 4px 4px;
   position: absolute;
   z-index: 999;
-  background-color: rgb(250, 250, 250);
-  border: 3px #000 solid;
-  border-color: rgb(138, 137, 137);
+  border: 1px #eaeaea solid;
   border-top: 0;
   border-right: 0;
   border-bottom: 0;
 }
 #nuams-bar h4 {
   margin: 5px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: normal;
   float: left;
 }
@@ -31,9 +29,12 @@
 }
 #nuams-burn-me {
   float: left;
-  background: url(http://www.nuams.com/sites/default/files/fire-10.png) 2px 2px no-repeat;
+  background: url('https://cloud.githubusercontent.com/assets/512243/3578164/8424692a-0ba5-11e4-8511-2a6b16349069.png') 2px 2px no-repeat;
   position: absolute;
   color: #000;
   padding: 2px 0 0 15px;
-  font-size: 13px;
+  font-size: 16px;
+}
+.zh-board-collaborators {
+  margin-bottom: 25px;
 }

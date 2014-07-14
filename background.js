@@ -1,17 +1,15 @@
-var visibleSetPoint = ".zh-pipeline-meta-visible";
-var placementPoint = ".zh-modal-board";
-var issuesLabel = "ul.zh-pipeline-issues li span.zh-issue-label";
+var visibleSetPoint = ".zh-pipeline-heading-container";
+var placementPoint = ".pagehead";
+var issuesLabel = ".zh-issue-label";
 
-if (window.location.host == 'github.com' && window.location.hash == '#boards') {
+var hash = window.location.hash.split("?",1);
+if (window.location.host == 'github.com' && hash == '#boards') {
   checkDOMChange();
 }
-
-console.log(window.location);
 
 function checkDOMChange() {
     if ($(visibleSetPoint).length) {
     	var menuPosition = $(visibleSetPoint).offset();
-    	console.log(menuPosition.top);
     	addtime(menuPosition);
     }
     else {
@@ -52,6 +50,7 @@ function hours(size) {
 
 function nuamsBar(text, menuPosition) {
 	var top = parseInt(menuPosition.top) + parseInt(87);
+var top = 175;
 	var width = $(visibleSetPoint).width();
 	return '<div id="nuams-bar" style="width: ' +  width +'px; left:' + menuPosition.left + 'px; top:' + top + 'px;"><div id="nuams-bar-inner">' + text + '</div></div>';
 }
