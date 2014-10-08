@@ -38,3 +38,9 @@
 .zh-board-collaborators {
   margin-bottom: 25px;
 }
+.flex-table-item-primary {
+  width: 50% !important;
+}
+#hours {
+  float: right;
+}

@@ -2,9 +2,25 @@ var visibleSetPoint = ".zh-pipeline-heading-container";
 var placementPoint = ".pagehead";
 var issuesLabel = ".zh-issue-label";
 
+
+
 var hash = window.location.hash.split("?",1);
 if (window.location.host == 'github.com' && hash == '#boards') {
   checkDOMChange();
+}
+else if (window.location.host == 'github.com') {
+	console.log(window.location);
+	var urlArgs = window.location.pathname.split('/');
+	if (urlArgs[3] == 'issues') {
+		var harvestUrl =  "https://nuams.harvestapp.com/platform/timer?app_name=GitHub&service=github.com&base_url=" + window.location.href + "&format=platform&external_account_id=NuCivic&external_group_id=nucivic-internal&external_group_name=nucivic-internal&external_item_id=" + urlArgs[3] + '/' + urlArgs[4];
+		console.log(harvestUrl);
+		$(".gh-header-meta").append('<div id="hours"></div>');
+		$('#hours').append().load(harvestUrl + " .item_history", function(data) {
+		});
+	}
+
+
+
 }
 
 function checkDOMChange() {
