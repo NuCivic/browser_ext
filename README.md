@@ -1,6 +1,8 @@
 Nüams Browser Ext
 ===========
 
+Requires: https://chrome.google.com/webstore/detail/github-time-tracking/fgkmkpoadhhloghmnnbodkoikmffafoe
+
 Chrome only!
 
 goto: chrome://extensions/
