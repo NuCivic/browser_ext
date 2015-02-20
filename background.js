@@ -46,7 +46,12 @@ function getHours() {
 
 function burnDownLink() {
 	var pathname = window.location.pathname;
-	var link = '<a targe="_blank" href="http://radekstepan.com/github-burndown-chart/#!' + pathname + '" id="nuams-burn-me">burndown</a>';
+  var milestone = window.location.hash.split("=");
+  var pathname = window.location.pathname.split("/");
+  var path = '/' + pathname[1] + '/' + pathname[2] + '/';
+  milestone = milestone[milestone.length - 1];
+
+	var link = '<a targe="_blank" href="http://nuams.github.io/usaid-prototype/#!' + path + milestone + '" id="nuams-burn-me">burndown</a>';
 	return link;
 }
 
