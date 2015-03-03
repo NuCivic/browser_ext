@@ -1,4 +1,4 @@
-Nüams Browser Ext
+NuCivic Browser Ext
 ===========
 
 Requires: https://chrome.google.com/webstore/detail/github-time-tracking/fgkmkpoadhhloghmnnbodkoikmffafoe
