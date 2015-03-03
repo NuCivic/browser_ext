@@ -13,8 +13,11 @@ else if (window.location.host == 'github.com') {
 	if (urlArgs[3] == 'issues' && (urlArgs[1] == 'NuCivic' || urlArgs[1] == 'nuams')) {
 		var harvestUrl =  "https://nuams.harvestapp.com/platform/timer?app_name=GitHub&service=github.com&base_url=" + window.location.href + "&format=platform&external_account_id=" + urlArgs[1] + "&external_group_id=" + urlArgs[2] + "&external_group_name=" + urlArgs[2] + "&external_item_id=" + urlArgs[3] + '/' + urlArgs[4];
 		$(".gh-header-meta").append('<div id="hours"></div>');
-		$('#hours').append().load(harvestUrl + " .item_history", function(data) {
-		});
+    $.get(harvestUrl, function(data) {
+      var value = $(data).find("#external_item_history-data-island").html();
+      var hours = JSON.parse(value).total_hours;
+      $('#hours').append('Total hours for this ticket: <strong>' + hours + '</strong>');
+    });
 	}
 }
 
